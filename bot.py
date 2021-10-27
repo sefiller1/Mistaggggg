@@ -165,12 +165,6 @@ async def mentionalladmin(event):
         usrnum = 0
         usrtxt = ""
     anlik_calisan.remove(event.chat_id)
-    
-@client.on(events.NewMessage())
-async def mentionalladmin(event):
-  global anlik_calisan
-  if event.is_private:
-    return await event.respond()
   
 
 print(">> Bot çalıyor merak etme 👮‍♂️ @MissTagBot bilgi alabilirsin <<")
