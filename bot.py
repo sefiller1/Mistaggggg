@@ -44,7 +44,7 @@ async def help(event):
                       Button.url('👮‍♂️ Sahibim', 'https://t.me/MissKraL')]
                     ),
                     link_preview=False
-                   )
+                   );
 
 
 @client.on(events.NewMessage(pattern="^/toplan ?(.*)"))
