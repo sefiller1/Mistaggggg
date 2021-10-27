@@ -1,30 +1,48 @@
-import os, logging, asyncio
-from telethon import Button
-from telethon import TelegramClient, events
-from telethon.sessions import StringSession
-from telethon.tl.types import ChannelParticipantsAdmins
+from pyrogram import Client, filters
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+
+from config import BOT_NAME as bn
 
 
 
-@client.on(events.NewMessage(pattern="^/start$"))
-async def start(event):
-  await event.reply("**Etiketleme Botu**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilir ★\nDaha fazla bilgi için **/help**'i tıklayın.",
-                    buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/MissTagBot?startgroup=a'),
-                      Button.url('Müzik Botu', 'https://t.me/missmusicsbot'),
-                      Button.url('👮‍♂️ Sahibim', 'https://t.me/MissKraL')]
-                    ),
-                    link_preview=False
-                   )
-@client.on(events.NewMessage(pattern="^/help$"))
-async def help(event):
-  helptext = """**Miss Tag Bot'un Yardım Menüsü**\n\nKomut: /Toplan \n  Bu komutu, başkalarına bahsetmek istediğiniz metinle birlikte kullanabilirsiniz. \n`Örnek: /Toplan Günaydın!`  \nBu komutu yanıt olarak kullanabilirsiniz. herhangi bir mesaj Bot, yanıtlanan iletiye kullanıcıları etiketleyerek ve /bitir yazarak etiketleme işlemi biter.
-\nAdminleri etiketlemek için ise /admin \n komutunu kullanabilirsiniz sevgiler"""
-  await event.reply(helptext,
-                    buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/MİSStagBot?startgroup=a'),
-                       Button.url('📣 Support', 'https://t.me/MissMusicSupport'),
-                      Button.url('👮‍♂️ Sahibim', 'https://t.me/MissKraL')]
-                    ),
-                    link_preview=False
-                   )
+
+@Client.on_message(filters.command("start") & filters.private & ~filters.channel)
+async def start(_, message: Message):
+    await message.reply_text(
+        f"""𝙼𝚎𝚛𝚑𝚊𝚋𝚊👋 𝙱𝚎𝚗 𝚃𝚎𝚕𝚎𝚐𝚛𝚊𝚖 𝙶𝚛𝚞𝚙𝚕𝚊𝚛ı𝚗𝚍𝚊 𝙱𝚊𝚗 𝚈𝚎𝚝𝚔𝚒𝚜𝚒 𝙾𝚕𝚖𝚊𝚍𝚊𝚗 𝙼ü𝚣𝚒𝚔 Ç𝚊𝚕𝚊𝚋𝚒𝚕𝚒𝚢𝚘𝚛𝚞𝚖. 𝙶𝚛𝚞𝚋𝚞𝚗𝚞𝚣𝚞𝚗 𝚜𝚎𝚜𝚕𝚒 𝚜𝚘𝚑𝚋𝚎𝚝𝚒𝚗𝚍𝚎 𝚖ü𝚣𝚒𝚔 ç𝚊𝚕𝚊𝚋𝚒𝚕𝚖𝚎𝚔 𝚒ç𝚒𝚗 𝙰𝚜𝚒𝚜𝚝𝚊𝚗ı𝚗 𝚐𝚛𝚞𝚋𝚞𝚗𝚞𝚣𝚍𝚊 𝚘𝚕𝚖𝚊𝚜ı 𝚐𝚎𝚛𝚎𝚔𝚒𝚛. 𝙰𝚂İ𝚂𝚃𝙰𝙽; @MissMuzikAsistan... """,
+        reply_markup=InlineKeyboardMarkup(
+            [ 
+                [
+                    InlineKeyboardButton(
+                        "🥳 Asistan 🥳", url="https://t.me/MissMuzikAsistan")
+                ],[
+                    InlineKeyboardButton(
+                        "📜 Kullanım Kılavuzu 📜", url="https://t.me/MissMusicSupport"
+                    )
+                ],[ 
+                    InlineKeyboardButton(
+                        "Sohbet Grubumuz 🎙️", url="https://t.me/intikamailesi"
+                    )],
+                [
+                    InlineKeyboardButton(text= "🔥Sahip🔥", url = "https://t.me/MissKraL")
+                ],[
+                   
+                     InlineKeyboardButton(text= "REKLAM Hizmeti", url = "https://t.me/DeepKraL")
+               ],
+           ]
+        ),
+     disable_web_page_preview=True
+    )
+
+@Client.on_message(filters.command("reload") & ~filters.private & ~filters.channel)
+async def gstart(_, message: Message):
+      await message.reply_text("""** ✅ Admin Listesi Güncellendi.. ✅**""",
+      reply_markup=InlineKeyboardMarkup(
+            [
+                [
+                    InlineKeyboardButton(
+                        "🔊 Support Ve Komutlar", url="https://t.me/MissMusicSupport")
+                ]
+            ]
+        )
+   )
