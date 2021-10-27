@@ -47,7 +47,7 @@ async def help(event):
                    )
 
 
-@client.on(events.NewMessage(pattern="^/utag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/toplan ?(.*)"))
 async def mentionall(event):
   global anlik_calisan
   if event.is_private:
@@ -106,7 +106,7 @@ async def mentionall(event):
         usrnum = 0
         usrtxt = ""
 
-@client.on(events.NewMessage(pattern="^/atag ?(.*)"))
+@client.on(events.NewMessage(pattern="^/admin ?(.*)"))
 async def mentionalladmin(event):
 
   if event.is_private:
