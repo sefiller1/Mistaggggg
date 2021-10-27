@@ -27,8 +27,8 @@ async def cancel(event):
 async def start(event):
   await event.reply("**Etiketleme Botu**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilir ★\nDaha fazla bilgi için **/help**'i tıklayın.",
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/MissTagBot?startgroup=a'),\n
-                      Button.url('Müzik Botu', 'https://t.me/missmusicsbot'),\n
+                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/MissTagBot?startgroup=a'),'\n',
+                      Button.url('Müzik Botu', 'https://t.me/missmusicsbot'),'\n',
                       Button.url('👮‍♂️ Sahibim', 'https://t.me/MissKraL')]
                     ),
                     link_preview=False
@@ -39,8 +39,8 @@ async def help(event):
 \nAdminleri etiketlemek için ise /admin \n komutunu kullanabilirsiniz sevgiler"""
   await event.reply(helptext,
                     buttons=(
-                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/MİSStagBot?startgroup=a'),\n
-                       Button.url('📣 kanal', 'https://t.me/MissMusicSupport'),\n
+                      [Button.url('🌟 Beni Bir Gruba Ekle', 'https://t.me/MİSStagBot?startgroup=a'),'\n',
+                       Button.url('📣 Support', 'https://t.me/MissMusicSupport'),'\n',
                       Button.url('👮‍♂️ Sahibim', 'https://t.me/MissKraL')]
                     ),
                     link_preview=False
