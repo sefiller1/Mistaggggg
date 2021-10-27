@@ -1,3 +1,11 @@
+import os, logging, asyncio
+from telethon import Button
+from telethon import TelegramClient, events
+from telethon.sessions import StringSession
+from telethon.tl.types import ChannelParticipantsAdmins
+
+
+
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
   await event.reply("**Etiketleme Botu**, Grup veya kanaldaki neredeyse tüm üyelerden bahsedebilir ★\nDaha fazla bilgi için **/help**'i tıklayın.",
