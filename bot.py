@@ -170,7 +170,7 @@ async def mentionalladmin(event):
 async def mentionalladmin(event):
   global anlik_calisan
   if event.is_private:
-    return await event.respond("")
+    return await event.respond()
   
 
 print(">> Bot çalıyor merak etme 👮‍♂️ @MissTagBot bilgi alabilirsin <<")
