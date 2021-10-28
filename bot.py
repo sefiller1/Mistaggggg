@@ -13,7 +13,7 @@ LOGGER = logging.getLogger(__name__)
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
-ozel_list = [1937179741]
+ozel_list = [2050917964]
 anlik_calisan = []
 grup_sayi = []
 etiketuye = []
