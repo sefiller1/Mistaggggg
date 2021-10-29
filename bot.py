@@ -21,7 +21,7 @@ anlik_calisan = []
 grup_sayi = []
 etiketuye = []
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel@MemberTaggerBot'))
+@client.on(events.NewMessage(pattern='^(?i)/cancel@MissTagBot'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
