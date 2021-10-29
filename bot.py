@@ -14,6 +14,7 @@ api_id = int(os.environ.get("APP_ID"))
 api_hash = os.environ.get("API_HASH")
 bot_token = os.environ.get("TOKEN")
 
+anlık_calisan = []
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
