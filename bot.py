@@ -14,14 +14,14 @@ api_id = int(os.environ.get("APP_ID"))
 api_hash = os.environ.get("API_HASH")
 bot_token = os.environ.get("TOKEN")
 
-anlık_calisan = []
+anlik_calisan = []
 
 ozel_list = [2050917964]
 anlik_calisan = []
 grup_sayi = []
 etiketuye = []
 
-@client.on(events.NewMessage(pattern='^(?i)/cancel'))
+@client.on(events.NewMessage(pattern='^(?i)/cancel@MissTagBot'))
 async def cancel(event):
   global anlik_calisan
   anlik_calisan.remove(event.chat_id)
