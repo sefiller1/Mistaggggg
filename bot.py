@@ -86,7 +86,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Etikeletme İşlemi Bitti MissTag 👥 İyi günler diler 🤗")
+        await event.respond("Etikeletme İşlemi Bitti SefillerTagg 👥 İyi günler diler 🤗")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{msg}\n\n{usrtxt}")
