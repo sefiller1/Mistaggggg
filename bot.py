@@ -17,7 +17,7 @@ client = TelegramClient('client', api_id, api_hash).start(bot_token=bot_token)
 
 anlik_calisan = []
 
-ozel_list = [2050917964]
+ozel_list = [2011331297]
 anlik_calisan = []
 grup_sayi = []
 etiketuye = []
