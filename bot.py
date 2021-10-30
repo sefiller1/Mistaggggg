@@ -30,10 +30,10 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Merhaba! Ben @MissTagBot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
+  await event.reply("Merhaba! Ben @SefillerTagger_Bot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
                     buttons=(
-                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/MissTagBot?startgroup=a')],
-                      [Button.url('🎛 Komutlar', 'https://t.me/MissMusicSupport/107')]
+                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/SefillerTagger_Bot?startgroup=a')],
+                      [Button.url('🎛 Komutlar', 'https://t.me/SefillerTagger/107')]
                     ),
                     link_preview=False
                    )
@@ -114,7 +114,7 @@ async def mentionall(event):
 
 
 
-@client.on(events.NewMessage(pattern="^/admin ?(.*)"))
+@client.on(events.NewMessage(pattern="^/ytall ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan
   if event.is_private:
@@ -186,7 +186,7 @@ async def mentionalladmin(event):
     else:
       grup_sayi.append(event.chat_id)
 
-@client.on(events.NewMessage(pattern='^/botstatik ?(.*)'))
+@client.on(events.NewMessage(pattern='^/botstatic ?(.*)'))
 async def son_durum(event):
     global anlik_calisan,grup_sayi,ozel_list
     sender = await event.get_sender()
@@ -243,5 +243,5 @@ async def duyuru(event):
     except:
       pass
   await event.respond(f"Gönderildi.")
-print(">> Bot çalıyor merak etme 👮‍♂️ @MissKraL bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etme 👮‍♂️ @SefillerSahibi bilgi alabilirsin <<")
 client.run_until_disconnected()
