@@ -30,10 +30,10 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Merhaba! Ben @Userr_TagBot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
+  await event.reply("Merhaba! Ben @BattleTagBot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
                     buttons=(
                       [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/BattleTagBot?startgroup=a')],
-                      [Button.url('🎛 Komutlar', 'https://t.me/SefillerTagger/107')]
+                      [Button.url('🎛 Komutlar', 'https://t.me/https://t.me/battletagbots/107')]
                     ),
                     link_preview=False
                    )
@@ -149,7 +149,7 @@ async def mentionalladmin(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Etikeletme İşlemi Bitti MissTag 👥 İyi günler diler 🤗")
+        await event.respond("Etikeletme İşlemi Bitti BattleTag 👥 İyi günler diler 🤗")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{msg}\n\n{usrtxt}")
@@ -192,7 +192,7 @@ async def son_durum(event):
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**Sefiller Tagger Bot İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
+    await event.respond(f"**BattleTagBot Bot İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
 
 
 @client.on(events.NewMessage(pattern='^/botduyuru ?(.*)'))
