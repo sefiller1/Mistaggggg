@@ -30,9 +30,9 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Merhaba! Ben @SefillerTagger_Bot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
+  await event.reply("Merhaba! Ben @Userr_TagBot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
                     buttons=(
-                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/SefillerTagger_Bot?startgroup=a')],
+                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/Userr_TagBot?startgroup=a')],
                       [Button.url('🎛 Komutlar', 'https://t.me/SefillerTagger/107')]
                     ),
                     link_preview=False
@@ -243,5 +243,5 @@ async def duyuru(event):
     except:
       pass
   await event.respond(f"Gönderildi.")
-print(">> Bot çalıyor merak etme 👮‍♂️ @SefillerSahibi bilgi alabilirsin <<")
+print(">> Bot çalıyor merak etme 👮‍♂️ @CUMHURBASKANIII bilgi alabilirsin <<")
 client.run_until_disconnected()
