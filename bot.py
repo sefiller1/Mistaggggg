@@ -33,7 +33,7 @@ async def start(event):
   await event.reply("Merhaba! Ben @BattleTagBot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
                     buttons=(
                       [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/BattleTagBot?startgroup=a')],
-                      [Button.url('🎛 Komutlar', '/https://t.me/battletagbots/107')]
+                      [Button.url('🎛 Komutlar', '@battletagbots/107')]
                     ),
                     link_preview=False
                    )
