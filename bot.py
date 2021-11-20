@@ -32,7 +32,7 @@ async def cancel(event):
 async def start(event):
   await event.reply("Merhaba! Ben @Userr_TagBot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
                     buttons=(
-                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/Userr_TagBot?startgroup=a')],
+                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/BattleTagBot?startgroup=a')],
                       [Button.url('🎛 Komutlar', 'https://t.me/SefillerTagger/107')]
                     ),
                     link_preview=False
@@ -86,7 +86,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Etikeletme İşlemi Bitti SefillerTagg 👥 İyi günler diler 🤗")
+        await event.respond("Etikeletme İşlemi Bitti BattleTagBot 👥 İyi günler diler 🤗")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{msg}\n\n{usrtxt}")
