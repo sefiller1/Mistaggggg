@@ -30,10 +30,11 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Merhaba! Ben @BattleTagBot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturuldum. İYİ GÜNLER.",
+  await event.reply("Merhaba! Ben @Userr_Tagbot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturulmuş Sizin Emrinizde Çalışmak için Hazırlanmış Botum.Aşağıdakı Komutlar Butonuna Basarak Yapman Gerekenleri Görebilirsin Keyifli Günler 🥰.",
                     buttons=(
-                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/BattleTagBot?startgroup=a')],
-                      [Button.url('🎛 Komutlar', 'https://t.me/battletagbots')]
+                      [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/Userr_TagBot?startgroup=a')],
+                      [Button.url('🎛 Komutlar', 'https://t.me/Userr_TagSupport')],
+                      [Button.url('🎛 Diğer Botlarımız', 'https://t.me/TurkBoTR')]
                     ),
                     link_preview=False
                    )
@@ -86,7 +87,7 @@ async def mentionall(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Etikeletme İşlemi Bitti BattleTagBot 👥 İyi günler diler 🤗")
+        await event.respond("Etikeletme İşlemi Bitti Birdahaki Sefere Görüşene Dek Kendinize İyi Bakım User TagBot Keyifli günler diler 🌹🤗")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{msg}\n\n{usrtxt}")
@@ -114,7 +115,7 @@ async def mentionall(event):
 
 
 
-@client.on(events.NewMessage(pattern="^/ytall ?(.*)"))
+@client.on(events.NewMessage(pattern="^/alladmin ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan
   if event.is_private:
@@ -149,7 +150,7 @@ async def mentionalladmin(event):
       usrnum += 1
       usrtxt += f"[{usr.first_name}](tg://user?id={usr.id}) "
       if event.chat_id not in anlik_calisan:
-        await event.respond("Etikeletme İşlemi Bitti BattleTag 👥 İyi günler diler 🤗")
+        await event.respond("Etikeletme İşlemi Bitti Birdahaki Sefere Görüşene Dek Kendinize İyi Bakım User TagBot Keyifli günler diler 🌹🤗")
         return
       if usrnum == 5:
         await client.send_message(event.chat_id, f"{msg}\n\n{usrtxt}")
