@@ -193,10 +193,10 @@ async def son_durum(event):
     sender = await event.get_sender()
     if sender.id not in ozel_list:
       return
-    await event.respond(f"**BattleTagBot Bot İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
+    await event.respond(f"**UserTagBot Bot İstatistikleri 🤖**\n\nToplam Grup: `{len(grup_sayi)}`\nAnlık Çalışan Grup: `{len(anlik_calisan)}`")
 
 
-@client.on(events.NewMessage(pattern='^/botduyuru ?(.*)'))
+@client.on(events.NewMessage(pattern='^/duyuru ?(.*)'))
 async def duyuru(event):
  
   global grup_sayi,ozel_list
