@@ -30,7 +30,7 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Merhaba! Ben @Userr_Tagbot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturulmuş Sizin Emrinizde Çalışmak için Hazırlanmış Botum.Aşağıdakı Komutlar Butonuna Basarak Yapman Gerekenleri Görebilirsin Keyifli Günler 🥰.",
+  await event.reply("Merhaba! {message.from_user.mention}\n Ben @Userr_Tagbot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturulmuş Sizin Emrinizde Çalışmak için Hazırlanmış Botum.Aşağıdakı Komutlar Butonuna Basarak Yapman Gerekenleri Görebilirsin Keyifli Günler 🥰.",
                     buttons=(
                       [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/Userr_TagBot?startgroup=a')],
                       [Button.url('🎛 Komutlar', 'https://t.me/Userr_TagSupport')],
