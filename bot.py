@@ -30,11 +30,11 @@ async def cancel(event):
 
 @client.on(events.NewMessage(pattern="^/start$"))
 async def start(event):
-  await event.reply("Merhaba! {message.from_user.mention}\n Ben @Userr_Tagbot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturulmuş Sizin Emrinizde Çalışmak için Hazırlanmış Botum.Aşağıdakı Komutlar Butonuna Basarak Yapman Gerekenleri Görebilirsin Keyifli Günler 🥰.",
+  await event.reply("Merhaba👨‍💻! f"[{usr.first_name}] Ben @Userr_Tagbot Grubunuzdaki Kullanıcıları Etiketlemek İçin Oluşturulmuş Sizin Emrinizde Çalışmak için Hazırlanmış Botum.Aşağıdakı Komutlar Butonuna Basarak Yapman Gerekenleri Görebilirsin Keyifli Günler 🥰.",
                     buttons=(
                       [Button.url('➕ Beni Bir Gruba Ekle ➕', 'https://t.me/Userr_TagBot?startgroup=a')],
                       [Button.url('🎛 Komutlar', 'https://t.me/Userr_TagSupport')],
-                      [Button.url('🎛 Diğer Botlarımız', 'https://t.me/TurkBoTR')]
+                      [Button.url('🎛 Müzik Ve Video Botumuz', 'https://t.me/BizimMusicBot')]
                     ),
                     link_preview=False
                    )
@@ -115,7 +115,7 @@ async def mentionall(event):
 
 
 
-@client.on(events.NewMessage(pattern="^/alladmin ?(.*)"))
+@client.on(events.NewMessage(pattern="^/ytall ?(.*)"))
 async def mentionalladmin(event):
   global anlik_calisan
   if event.is_private:
